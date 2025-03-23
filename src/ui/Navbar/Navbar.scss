@@ -1,0 +1,32 @@
+@use "../../sass/variables" as v;
+
+nav {
+    padding: v.$m v.$mx-regular;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 4vw;
+        li a {
+            position: relative;
+            &::after {
+                transition: .1s;
+                content: '';
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                position: absolute;
+            }
+            &:hover {
+                &::after {
+                    transition: .2s;
+                    width: 100%;
+                    background-color: v.$primary-hover;
+                }
+            }
+        }
+    }
+}
