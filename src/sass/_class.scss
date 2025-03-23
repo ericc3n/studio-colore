@@ -1,0 +1,22 @@
+@use './variables' as v;
+
+button, a {
+    font: 1rem 'Poppins', sans-serif;
+    line-height: 23px;
+    padding: .5em 1em;
+    border-radius: v.$border-r-regular;
+    text-decoration: none;
+    cursor: pointer;
+    &.btn-1 {
+        color: #ffffff;
+        font-weight: 600;
+        background-color: v.$primary-item;
+        border: none;
+    }
+    &.btn-2 {
+        color: v.$title-color;
+        font-weight: 300;
+        border: 1px solid v.$primary-item;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,18 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @media (max-width: 520px) { @content; }
+    }
+    @if $breakpoint == 'tablet' {
+        @media (max-width: 768px) { @content; }
+    } 
+    @if $breakpoint == 'desktop' {
+        @media (max-width: 1130px) { @content; }
+    }
+    @else {
+        @media (max-width: $breakpoint) { @content; }
+    }
+}
+
+@mixin box-shadow($position: 4px) {
+    box-shadow: $position 4px 1px 4px;
+}
