@@ -1,0 +1,48 @@
+@use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
+
+div.hero {
+    padding: v.$xxxl var(--MX-REGULAR);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    .text-content {
+        flex: 1;
+        p {
+            margin-bottom: v.$xl;
+        }
+    }
+    .side-content {
+        flex: 1;
+        max-width: 600px;
+        img {
+            width: 100%;
+            border-radius: v.$border-r-s;
+        }
+        ul.business-info {
+            margin-top: v.$s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            border-radius: v.$border-r-s;
+            background-color: #2656CC;
+            padding: 1.5rem;
+            font-size: v.$xl;
+            color: v.$bg-main;
+            font-weight: 600;
+            li.separator {
+                font-weight: 200;
+            }
+        }
+    }
+    @include m.respond-to(1080px) {
+        flex-direction: column;
+        align-items: start;
+        gap: v.$xl;
+        .side-content ul.business-info {
+            font-size: v.$l;
+        }
+    }
+}

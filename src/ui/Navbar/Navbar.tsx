@@ -11,8 +11,8 @@ const MOBILE_SCREEN = 900;
 
 export default function Navbar() {
   const [isMenuIntercepted, setIsMenuIntercepted] = useState<boolean>(false);
-  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(window.innerWidth < MOBILE_SCREEN);
-  const [isDropMenuOpened, setIsMenuOpened] = useState<boolean>(false);
+  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(false);
+  const [isDropMenuOpened, setIsDropMenuOpened] = useState<boolean>(false);
 
   const navRef = useRef<HTMLUListElement | null>(null); // Reference for nav-elements
 
@@ -23,7 +23,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent): void => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setIsMenuOpened(false);
+        setIsDropMenuOpened(false);
       }
     }
 
@@ -34,6 +34,8 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isDropMenuOpened]);
 
+  useEffect(() => {setIsMobileScreen(window.innerWidth < MOBILE_SCREEN)}, []);
+
   return (
     <nav>
       <img src="/favicon.png" alt="fav-icon" className="logo" />
@@ -41,23 +43,23 @@ export default function Navbar() {
         {isMobileScreen && (
           <span
             className="drop-menu-button"
-            onClick={() => setIsMenuOpened((prev) => !prev)}
+            onClick={() => setIsDropMenuOpened((prev) => !prev)}
           >
             {isDropMenuOpened ? <IoMdClose className="icon" /> : <IoMdMenu className="icon" />}
           </span>
         )}
         <ul ref={navRef} className={`nav-elements${isDropMenuOpened ? " show" : ""}`}>
-          <li onClick={() => {setIsMenuOpened(false)}}><Link href="/">Home</Link></li>
+          <li onClick={() => {setIsDropMenuOpened(false)}}><Link href="/">Home</Link></li>
           <li 
             className="container" 
             onMouseEnter={() => setIsMenuIntercepted(true)}
             onMouseLeave={() => setIsMenuIntercepted(false)}
           >
             <span>Soluzioni</span>
-            <SolutionsMenu setIsMenuOpened={setIsMenuOpened} setIsMenuIntercepted={setIsMenuIntercepted} isMenuIntercepted={isMenuIntercepted} />
+            <SolutionsMenu setIsDropMenuOpened={setIsDropMenuOpened} setIsMenuIntercepted={setIsMenuIntercepted} isMenuIntercepted={isMenuIntercepted} />
           </li>
-          <li onClick={() => {setIsMenuOpened(false)}}><Link href="/testimonials">Testimonianze</Link></li>
-          <li onClick={() => {setIsMenuOpened(false)}}><Link href="/contatti">Contatti</Link></li>
+          <li onClick={() => {setIsDropMenuOpened(false)}}><Link href="/testimonials">Testimonianze</Link></li>
+          <li onClick={() => {setIsDropMenuOpened(false)}}><Link href="/contatti">Contatti</Link></li>
         </ul>
       </div>
     </nav>

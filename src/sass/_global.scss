@@ -37,21 +37,21 @@ body {
 
 h1 {
     font-size: v.$xxl;
-    list-style: 1.35;
+    line-height: 1.25;
     color: v.$title-color;
     font-weight: 600;
 }
 
 h2 {
     font-size: v.$xl;
-    list-style: 1.35;
+    line-height: 1.35;
     color: v.$h2-color;
     font-weight: 600;
 }
 
 h3 {
     font-size: v.$m;
-    list-style: 1.35;
+    line-height: 1.35;
     color: v.$title-color;
     font-weight: 500;
     &.light {
@@ -61,7 +61,7 @@ h3 {
 
 p {
     font-size: v.$regular;
-    list-style: 1.6;
+    line-height: 1.6;
     &.light {
         font-weight: 200;
     }

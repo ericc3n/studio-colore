@@ -3,16 +3,16 @@ import "./SolutionsMenu.scss";
 import React, { SetStateAction } from "react";
 
 interface PropsType {
-  setIsMenuOpened: React.Dispatch<SetStateAction<boolean>>,
+  setIsDropMenuOpened: React.Dispatch<SetStateAction<boolean>>,
   setIsMenuIntercepted: React.Dispatch<SetStateAction<boolean>>,
   isMenuIntercepted: boolean
 }
 
-export default function SolutionsMenu({ setIsMenuOpened, setIsMenuIntercepted, isMenuIntercepted }: PropsType) {
-  const closeMenu = () => {
+export default function SolutionsMenu({ setIsDropMenuOpened, setIsMenuIntercepted, isMenuIntercepted }: PropsType) {
+  const closeMenu = (): void => {
     if (isMenuIntercepted) {
       setIsMenuIntercepted(false)
-      setIsMenuOpened(false)
+      setIsDropMenuOpened(false)
     }
   }
   return (
