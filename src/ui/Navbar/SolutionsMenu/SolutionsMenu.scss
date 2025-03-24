@@ -1,0 +1,42 @@
+@use "../../../sass/variables" as v;
+@use "../../../sass/mixins" as m;
+
+nav li.container {
+    position: relative; 
+    span {
+        cursor: pointer;
+    }
+    ul.solutions-menu {
+        position: absolute;
+        padding-top: v.$s;
+        transition: .2s;
+        border-radius: v.$border-r-s;
+        list-style: none;
+        width: max-content;
+        pointer-events: none;
+        z-index: 2;
+        
+        opacity: 0;
+        transform: translateY(-5px);
+        li {
+            background-color: v.$bg-3;
+            padding: .5rem 1rem 0;
+            &:last-child { padding-bottom: .5rem; }
+            a {
+                transition: .1s; 
+                &:hover {
+                    transition: .2s;
+                    color: v.$primary-hover;
+                }
+            }
+        }
+
+        // Dynamic class 
+        &.show {
+            pointer-events: all;
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+    }
+}

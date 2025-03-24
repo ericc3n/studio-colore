@@ -13,6 +13,7 @@
     }
 }
 
-@mixin box-shadow($position: 4px) {
-    box-shadow: $position 4px 1px 4px;
+@mixin box-shadow($position: -1.95px) {
+    box-shadow: rgba(0, 0, 0, 0.15) $position 1.95px 2.6px;
+    background-color: #EFF1F8;
 }

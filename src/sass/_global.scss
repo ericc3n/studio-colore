@@ -8,6 +8,15 @@
     font-style: normal;
 }
 
+:root {
+    --MX-REGULAR: calc(18% - 3rem);
+}
+@media screen and (max-width: 521px) {
+    :root {
+        --MX-REGULAR: 1rem;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,4 +71,8 @@ a {
     text-decoration: none;
     color: v.$p-color;
     cursor: pointer;
+}
+
+img.logo {
+    pointer-events: none;
 }

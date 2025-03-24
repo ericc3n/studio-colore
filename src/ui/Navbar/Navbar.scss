@@ -1,15 +1,16 @@
 @use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
 
 nav {
-    padding: v.$m v.$mx-regular;
+    padding: v.$m var(--MX-REGULAR);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ul {
+    .nav-container .nav-elements {
         list-style: none;
         display: flex;
         gap: 4vw;
-        li a {
+        > li:not(.container) a {
             position: relative;
             &::after {
                 transition: .1s;
@@ -25,6 +26,39 @@ nav {
                     transition: .2s;
                     width: 100%;
                     background-color: v.$primary-hover;
+                }
+            }
+        }
+    }
+    @include m.respond-to(900px) {
+        .nav-container {
+            background-color: v.$bg-2;
+            .drop-menu-button {
+                .icon {
+                    vertical-align: middle;
+                }
+            }
+            .nav-elements {
+                transition: .1s;
+                margin-top: 1rem;
+                position: absolute;
+                right: 0;
+                display: block;
+                width: 100vw;
+                padding: .5rem var(--MX-REGULAR) 0;
+                @include m.box-shadow();
+
+                opacity: 0;
+                transform: translateY(-8px);
+                > li {
+                    margin-bottom: .5rem;
+                }
+
+                // Dynamyc class
+                &.show {
+                    transition: .2s;
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
         }
