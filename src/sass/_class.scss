@@ -7,6 +7,9 @@
 .my-xl {
     margin-top: v.$xl;
 }
+.section {
+    padding: v.$xxxl var(--MX-REGULAR);
+}
 
 // Buttons
 button.btn-1,

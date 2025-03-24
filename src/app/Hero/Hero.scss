@@ -2,7 +2,6 @@
 @use "../../sass/mixins" as m;
 
 div.hero {
-    padding: v.$xxxl var(--MX-REGULAR);
     display: flex;
     align-items: center;
     justify-content: space-between;

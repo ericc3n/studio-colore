@@ -1,0 +1,38 @@
+@use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
+
+.our-services {
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .card {
+            transition: .2s;
+            padding: .75rem 1rem;
+            width: 23%;
+            border-radius: v.$border-r-s;
+            border: 2px solid transparent;
+            cursor: pointer;
+            @include m.box-shadow();
+
+            &:hover {
+                box-shadow: v.$primary-hover 0 1.95px 0;
+            }
+
+            .icon {
+                font-size: v.$xl;
+                color: v.$primary-item;
+                margin-bottom: .25rem;
+            }
+        }
+    }
+    @include m.respond-to(900px) {
+        .cards {
+            gap: .75rem;
+            .card {
+                width: 48.1%;
+            }
+        }
+    }
+}

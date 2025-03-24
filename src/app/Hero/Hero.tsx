@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="hero">
+    <div className="hero section">
       <div className="text-content">
         <h3 className="semi-title">Grafica e Stampe</h3>
         <h1>Soluzioni ideali per ogni esigenza visiva</h1>
