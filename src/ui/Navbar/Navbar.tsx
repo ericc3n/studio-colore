@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <img src="/favicon.png" alt="fav-icon" height={32} className="logo" />
+      <img src="/favicon.png" alt="fav-icon" className="logo" />
       <div className="nav-container">
         {isMobileScreen && (
           <span
@@ -54,7 +54,7 @@ export default function Navbar() {
             onMouseLeave={() => setIsMenuIntercepted(false)}
           >
             <span>Soluzioni</span>
-            <SolutionsMenu setIsMenuIntercepted={setIsMenuIntercepted} isMenuIntercepted={isMenuIntercepted} />
+            <SolutionsMenu setIsMenuOpened={setIsMenuOpened} setIsMenuIntercepted={setIsMenuIntercepted} isMenuIntercepted={isMenuIntercepted} />
           </li>
           <li onClick={() => {setIsMenuOpened(false)}}><Link href="/testimonials">Testimonianze</Link></li>
           <li onClick={() => {setIsMenuOpened(false)}}><Link href="/contatti">Contatti</Link></li>
