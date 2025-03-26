@@ -2,10 +2,15 @@
 @use "../../sass/mixins" as m;
 
 nav {
+    position: sticky;
+    top: 0;
     padding: v.$m var(--MX-REGULAR);
+    background-color: v.$bg-main;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2.6px;
+    
     .nav-container .nav-elements {
         list-style: none;
         display: flex;
@@ -30,6 +35,7 @@ nav {
             }
         }
     }
+
     @include m.respond-to(900px) {
         .nav-container {
             background-color: v.$bg-2;
@@ -44,14 +50,14 @@ nav {
                 position: absolute;
                 right: 0;
                 display: block;
-                width: 100vw;
-                padding: .5rem var(--MX-REGULAR) 0;
+                width: 100%;
+                padding: 1rem var(--MX-REGULAR) 0;
                 @include m.box-shadow();
 
                 opacity: 0;
                 transform: translateY(-8px);
                 > li {
-                    margin-bottom: .5rem;
+                    margin-bottom: 1rem;
                 }
 
                 // Dynamyc class

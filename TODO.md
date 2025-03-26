@@ -1,0 +1,2 @@
+- Fare navbar sticky o che scende
+- Sezione workflow

@@ -1,0 +1,55 @@
+@use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
+
+.work-flow {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .image-grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: v.$s;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: v.$border-r-s;
+            &:first-child {
+                grid-row: 1 / 3;
+            }
+        }
+    }
+    .text-content {
+        flex: 1;
+        ul {
+            margin-top: v.$l;
+            list-style: none;
+            li {
+                margin-bottom: v.$m;
+                display: flex;
+                gap: 1rem;
+                .number { 
+                    color: v.$primary-text-color;
+                    border-radius: 100%;
+                    display: inline-flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                    min-width: v.$m * 2; 
+                    min-height: v.$m * 2; 
+                    width: v.$m * 2; 
+                    height: v.$m * 2; 
+                    font-size: v.$m;
+                    font-weight: 600;
+                    box-sizing: border-box; 
+                    line-height: 1; 
+                    border: 1px solid v.$primary-item;
+                }
+            }
+        }
+    }
+    @include m.respond-to(900px) {
+        flex-direction: column;
+    }
+}

@@ -47,6 +47,14 @@ a.btn-2 {
     border: 1px solid v.$primary-item;
     background-color: transparent;
 }
+a.simple-link {
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 // Text
 h3.semi-title {

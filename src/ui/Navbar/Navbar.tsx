@@ -34,7 +34,10 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isDropMenuOpened]);
 
-  useEffect(() => {setIsMobileScreen(window.innerWidth < MOBILE_SCREEN)}, []);
+  useEffect(() => {
+    setIsMobileScreen(window.innerWidth < MOBILE_SCREEN);
+  }, []);
+
 
   return (
     <nav>
