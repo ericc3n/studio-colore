@@ -1,0 +1,57 @@
+@use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
+
+footer {
+    margin-top: v.$xxxl;
+    padding: v.$xxxl var(--MX-REGULAR) v.$l;
+    background-color: v.$bg-3;
+    .main {
+        padding-bottom: v.$xxxl;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: v.$m;
+        .logo-socials {
+            ul.socials {
+                margin-top: v.$regular;
+                display: flex;
+                list-style: none;
+                font-size: v.$xl;
+                gap: 1rem;
+                li a:hover {
+                    color: hsl(28, 7%, 28%);
+                }
+            }
+        }
+        ul.column {
+            list-style: none;
+            max-width: 250px;
+            .title {
+                font-weight: 200;
+                margin-bottom: v.$regular;
+            }
+            li {
+                margin-bottom: v.$xs;
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.contacts {
+                li {
+                    display: flex;
+                    .icon {
+                        padding-right: v.$s;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+    .end-line {
+        border-top: 1px solid hsla(28, 7%, 43%, 20%);
+        padding-top: v.$m;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

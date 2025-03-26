@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function ServicesSection() {
   return (
-    <div className="our-services section">
+    <div className="our-services">
       <div className="text-content">
         <h2>I nostri servizi</h2>
       </div>

@@ -9,6 +9,7 @@ export default function WorkflowSection() {
         <img src="/printer.jpg" alt="printer" />
       </div>
       <div className="text-content">
+        <h3 className="semi-title">Passaggi</h3>
         <h2>Flusso di lavoro</h2>
         <ul>
           <li>

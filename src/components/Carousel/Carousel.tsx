@@ -17,7 +17,7 @@ export default function Carousel({ items }: PropsType) {
         items={items}
         mouseTracking
         disableButtonsControls={false}
-        paddingLeft={2.6}
+        paddingLeft={2}
         paddingRight={16}
         responsive={{
           0: { items: 1 },

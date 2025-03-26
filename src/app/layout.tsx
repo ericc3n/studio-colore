@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../sass/_global.scss";
 import Navbar from "@/ui/Navbar/Navbar";
+import Footer from "@/ui/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Studio Colore",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

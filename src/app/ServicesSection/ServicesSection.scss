@@ -1,7 +1,8 @@
 @use "../../sass/variables" as v;
 @use "../../sass/mixins" as m;
 
-.section.our-services {
+.our-services {
+    padding: 0 var(--MX-REGULAR) v.$xxxl;
     .cards {
         display: flex;
         justify-content: space-between;
