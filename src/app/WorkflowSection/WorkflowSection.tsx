@@ -30,7 +30,7 @@ export default function WorkflowSection() {
             <span className="number">3</span>
             <div className="point">
               <h3>Produzione</h3>
-              <p>Stampiamo con tecnologie all'avanguardia per risultati impeccabili</p>
+              <p>{"Stampiamo con tecnologie all'avanguardia per risultati impeccabili"}</p>
             </div>
           </li>
           <li>
