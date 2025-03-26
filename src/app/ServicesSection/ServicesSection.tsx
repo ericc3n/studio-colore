@@ -2,7 +2,6 @@
 
 import { FaChevronRight, FaImage, FaPaintBrush, FaPortrait, FaScroll } from "react-icons/fa";
 import "./ServicesSection.scss";
-import SimpleLink from "@/components/Buttons/SimpleLink";
 import Link from "next/link";
 
 export default function ServicesSection() {

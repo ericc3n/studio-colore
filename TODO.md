@@ -1,4 +1,5 @@
-- Fare navbar sticky o che scende
-- Sezione workflow
+# Main
 
+# Performance
 - Ottimizzazione immagini
+- Installare vercel statics nell'applicazione
