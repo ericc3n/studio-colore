@@ -1,0 +1,8 @@
+@use "../../sass/variables" as v;
+@use "../../sass/mixins" as m;
+
+.section.testimonials {
+    .text-content {
+        margin-bottom: v.$xl;
+    }
+}

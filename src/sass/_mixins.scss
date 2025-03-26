@@ -17,3 +17,15 @@
     box-shadow: rgba(0, 0, 0, 0.15) $position 1.95px 2.6px;
     background-color: #EFF1F8;
 }
+
+@mixin fade-animation($position) {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-$position);
+    &.show {
+        pointer-events: all;
+        transition: .2s;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

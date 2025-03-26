@@ -1,5 +1,6 @@
 import Hero from "./Hero/Hero";
 import ServicesSection from "./ServicesSection/ServicesSection";
+import TestimonialsSection from "./TestimonialsSection/Testimonials";
 import WorkflowSection from "./WorkflowSection/WorkflowSection";
 
 export default function page() {
@@ -8,6 +9,7 @@ export default function page() {
       <Hero />
       <ServicesSection />
       <WorkflowSection />
+      <TestimonialsSection />
     </>
   )
 }

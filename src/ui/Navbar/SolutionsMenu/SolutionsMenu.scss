@@ -13,14 +13,12 @@ nav li.container {
         border-radius: 16px;
         list-style: none;
         width: max-content;
-        pointer-events: none;
         z-index: 2;
         
-        opacity: 0;
-        transform: translateY(-5px);
+        @include m.fade-animation(5px);
         li {
             background-color: v.$bg-3;
-            padding: .5rem 5rem 0;
+            padding: .5rem 1.5rem 0;
             &:last-child { padding-bottom: .5rem; border-radius: 0 0 4px 4px; }
             &:first-child { border-radius: 4px 4px 0 0;}
             a {
@@ -30,14 +28,6 @@ nav li.container {
                     color: v.$primary-hover;
                 }
             }
-        }
-
-        // Dynamic class 
-        &.show {
-            pointer-events: all;
-            opacity: 1;
-            transform: translateY(0);
-
         }
     }
 }

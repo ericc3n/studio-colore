@@ -46,6 +46,14 @@ a.btn-2 {
     font-weight: 300;
     border: 1px solid v.$primary-item;
     background-color: transparent;
+    transition: .1s;
+    &:hover {
+        transition: .2s;
+        background-color: v.$primary-hover;
+        color: white;
+        border: 1px solid transparent;
+        transform: scale(95%);
+    }
 }
 a.simple-link {
     display: inline-block;

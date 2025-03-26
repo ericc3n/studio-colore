@@ -1,0 +1,41 @@
+@use "../../sass/variables" as v;
+
+.carousel { 
+    position: relative;
+    .carousel-arrow {
+        transition: .1s;
+        position: absolute;
+        top: -2rem;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: v.$primary-item;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+        }
+
+        &.left {
+            right: 2rem;
+        }
+    }
+
+    .alice-carousel__dots {
+        margin-block-start: 1rem;
+        margin-block-end: 0;
+        .alice-carousel__dots-item {
+            &:not(.__custom) {
+                background-color: v.$primary-item;
+                opacity: .2;
+            }
+            &:not(.__custom).__active {
+                background-color: v.$primary-item;
+                opacity: 1;
+            }
+            &:not(.__custom):not(:last-child) {
+                margin-right: v.$regular;
+            }
+        }
+    }
+}

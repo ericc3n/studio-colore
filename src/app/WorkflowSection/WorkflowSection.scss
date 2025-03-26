@@ -1,7 +1,7 @@
 @use "../../sass/variables" as v;
 @use "../../sass/mixins" as m;
 
-.work-flow {
+.section.work-flow {
     display: flex;
     justify-content: space-between;
     gap: 2rem;

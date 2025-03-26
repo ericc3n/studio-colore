@@ -1,0 +1,21 @@
+@use "../../../sass/variables" as v;
+
+.slide {
+    border-radius: v.$border-r-s;
+    margin-right: 1.5rem;
+    margin-bottom: 2.6px;
+    img {
+        width: 100%;
+        display: block;
+    }
+    .description {
+        height: max-content;
+        padding: v.$m v.$regular;
+        box-shadow: rgba(0, 0, 0, 0.15) -1.4px 1.4px 2.6px;
+        background-color: #EFF1F8;
+        h3 {
+            line-height: 1.25;
+            margin-bottom: .5rem;
+        }
+    }
+}
