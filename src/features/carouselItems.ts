@@ -6,7 +6,7 @@ interface CarouselType {
 
 const carouselItems: CarouselType[] = [
   {
-    imgSrc: "/carouselItems/smartbox.jpg",
+    imgSrc: "/carouselItems/smartbox-vetrina.jpg",
     title: "Punto vendita smartbox",
     date: "30 Maggio 2020",
   },
