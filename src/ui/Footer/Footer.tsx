@@ -24,7 +24,7 @@ export default function Footer() {
           <li className="title">Orario</li>
           <li><b>Lavorativi</b>: 8:30 - 13, 14 - 19:30</li>
           <li><b>Sabato</b>: 9 - 13</li>
-          <li><b>Domenica</b>: Chouso</li>
+          <li><b>Domenica</b>: Chiuso</li>
         </ul>
         <ul className="column">
           <li className="title">Pagine</li>
